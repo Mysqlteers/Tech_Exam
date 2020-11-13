@@ -19,7 +19,7 @@ public class HomeController {
         this.personService = personService;
     }
 
-    @GetMapping("/")
+    @GetMapping("/")//
     public String index(Model model) {
         model.addAttribute("persons", personService.findAll());
         System.out.println("person has entered the page");
