@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.mysqlteers</groupId>
     <artifactId>tech_exam</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
     <name>tech_exam</name>
     <description>Tech exam project, for ci/cd pipeline</description>
 
