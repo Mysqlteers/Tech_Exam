@@ -21,7 +21,7 @@ class PersonJPATest {
 
     @Test
     void delete() {
-        assertTrue(true);
+        assertTrue(false);
     }
 
     @Test
