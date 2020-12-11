@@ -38,7 +38,7 @@ class PersonJPATest {
     void delete() {
         Person person = personService.findByName(TEST_NAME).get();
         personService.delete(person);
-        assertTrue(personService.findByName(TEST_NAME).isEmpty());
+        assert(!personService.findByName(TEST_NAME).isPresent());
     }
 
     @Test
@@ -47,7 +47,7 @@ class PersonJPATest {
         Person newPerson = personService.save(new Person());
         personService.deleteById(newPerson.getId());
         System.out.println(newPerson.getId());
-        assertTrue(personService.findById(newPerson.getId()).isEmpty());
+        assertTrue(!personService.findById(newPerson.getId()).isPresent());
     }
 
     @Test
