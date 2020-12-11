@@ -19,10 +19,9 @@ public class HomeController {
         this.personService = personService;
     }
 
-    @GetMapping("/")//
+    @GetMapping("/")
     public String index(Model model) {
         model.addAttribute("persons", personService.findAll());
-        System.out.println("person has entered the page");
         return "index";
     }
 
@@ -31,7 +30,10 @@ public class HomeController {
         personService.save(newPerson);
         return "redirect:/";
     }
+
+    @GetMapping("/sortedList")
+    public String sortedList(Model model) {
+        model.addAttribute("persons", personService.findAllByOrderByName());
+        return "sortedList";
+    }
 }
-
-
-////
