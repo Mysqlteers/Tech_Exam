@@ -47,7 +47,7 @@ class PersonJPATest {
         Person newPerson = personService.save(new Person());
         personService.deleteById(newPerson.getId());
         System.out.println(newPerson.getId());
-        assertTrue(!personService.findById(newPerson.getId()).isPresent());
+        assertFalse(personService.findById(newPerson.getId()).isPresent());
     }
 
     @Test
